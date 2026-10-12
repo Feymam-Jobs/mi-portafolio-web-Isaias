@@ -23,6 +23,7 @@
                     <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
                     <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
                     <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#proyectos" onclick="seleccionar()">PROYECTOS</a></li>
                     <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
                 </ul>
             </nav>
@@ -46,8 +47,6 @@
                 <a href="#"><i class="fa-brands fa-skype"></i></a>
                 <a href="https://github.com/Feymam-Jobs"><i class="fa-brands fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/isa%C3%ADas-ca%C3%B1ate-d%C3%ADaz-696b11279/"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://wa.me/573043076460" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="#"><i class="fa-solid fa-rss"></i></a>
             </div>
         </div>
     </section>
@@ -373,6 +372,34 @@
         </div>
     </section>
 
+    <!-- SECCION PROYECTOS -->
+    <section id="proyectos" class="proyectos">
+        <div class="contenido-seccion">
+            <h2>PROYECTOS</h2>
+            <p class="proyectos-intro">Aplicaciones que he construido y que puedes probar en línea.</p>
+            <div class="proyectos-grid">
+                <article class="tarjeta-proyecto">
+                    <div class="tarjeta-banner">
+                        <i class="fa-solid fa-diagram-project"></i>
+                        <span class="etiqueta">En línea</span>
+                    </div>
+                    <div class="tarjeta-cuerpo">
+                        <h3>Asignador Inteligente de Proyectos</h3>
+                        <p>Plataforma que asigna proyectos de práctica a programadores freelance según su nivel, el stack tecnológico que dominan y el tiempo que tienen disponible.</p>
+                        <ul class="tarjeta-puntos">
+                            <li>Filtro por nivel: Junior o Senior</li>
+                            <li>Ajusta los requisitos al tiempo disponible</li>
+                            <li>Usa solo las tecnologías que el usuario conoce</li>
+                        </ul>
+                        <a class="btn-proyecto" href="https://proyecto-integrador-v1.onrender.com/" target="_blank" rel="noopener noreferrer">
+                            Ver proyecto <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <!-- SECCION CONTACTO -->
     <section id="contacto" class="contacto">
         <div class="contenido-seccion">
@@ -434,6 +461,17 @@
         </div>
         <p>Hola</p>
     </footer>
+    <!-- VENTANA DE CONFIRMACION DEL FORMULARIO -->
+    <div class="modal-fondo" id="modalMensaje" role="dialog" aria-modal="true" aria-labelledby="modalTitulo" aria-hidden="true">
+        <div class="modal-caja" id="modalCaja">
+            <div class="modal-icono" id="modalIcono"></div>
+            <h3 id="modalTitulo"></h3>
+            <p id="modalTexto"></p>
+            <button type="button" class="modal-boton" id="modalBoton"></button>
+            <div class="modal-barra" id="modalBarra"><span></span></div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
     <script src="script.js"></script>
     <script src="server.js"></script>
