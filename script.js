@@ -51,4 +51,29 @@ function descargarPDF() {
 //detecto el scrolling para aplicar la animacion de la barra de habilidades
 window.onscroll = function(){
     efectoHabilidades();
-} 
+}
+
+//Envío del formulario de contacto: al enviarse, la página se recarga en el portafolio
+; (function(){
+    var form = document.getElementById("miFormulario");
+    if(!form) return;
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+        fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: { "Accept": "application/json" }
+        }).then(function(respuesta){
+            if(respuesta.ok){
+                form.reset();
+                alert("¡Mensaje enviado! Gracias por contactarme.");
+                // recarga el portafolio desde el inicio
+                window.location.href = window.location.pathname;
+            }else{
+                alert("No se pudo enviar el mensaje. Intenta de nuevo.");
+            }
+        }).catch(function(){
+            alert("No se pudo enviar el mensaje. Revisa tu conexión e intenta de nuevo.");
+        });
+    });
+})();
